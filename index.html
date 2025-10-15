@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Prosper Tech Bank</title>
+  <style>
+    :root {
+      --primary: #6d28d9;
+      --secondary: #4f46e5;
+      --accent: #22d3ee;
+      --bg: #0f172a;
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-light);
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin: 60px auto;
+      line-height: 1.6;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hero-text {
+      flex: 1 1 500px;
+      animation: fadeIn 1s ease;
+    }
+    .hero-text h2 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, var(--accent), #a78bfa);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero-buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .hero-buttons a.primary {
+      background: var(--accent);
+      color: var(--bg);
+      box-shadow: 0 4px 15px rgba(34,211,238,0.3);
+    }
+    .hero-buttons a.primary:hover {
+      background: #0ea5e9;
+    }
+    .hero-buttons a.secondary {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
+    .form-box {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      flex: 1 1 350px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+    input[type="text"], input[type="email"] {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      outline: none;
+    }
+    button {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--accent);
+      padding-left: 10px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    details {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Lucky Prosper Tech Bank</h1>
+      <nav>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#products">Products</a>
+        <a href="#faq">FAQ</a>
+        <a href="#signup">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Where Tech Meets Fortune</h2>
+        <p>Lucky Prosper Tech Bank invests in cutting-edge digital assets — from crypto and NFTs to experimental server jits and probability-based ventures. We embrace volatility to chase massive growth — returning a microscopic share to you.</p>
+        <div class="hero-buttons">
+          <a href="#signup" class="primary">Get Started</a>
+          <a href="#how-it-works" class="secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="form-box">
+        <h3>Create an Account</h3>
+        <form id="signup-form">
+          <label>Full Name</label>
+          <input type="text" id="name" placeholder="Jane Doe" required>
+          <label>Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+          <label><input type="checkbox" required> I acknowledge this is a high-risk investment.</label>
+          <button type="submit">Sign Up (Demo)</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <h3 class="section-title">How It Works</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>Pool & Allocate</h4>
+          <p>We aggregate capital and diversify across high-risk tech assets and probability ventures.</p>
+        </div>
+        <div class="card">
+          <h4>Dynamic Management</h4>
+          <p>Advanced algorithms and human analysts manage positions in volatile environments.</p>
+        </div>
+        <div class="card">
+          <h4>Rewards Distribution</h4>
+          <p>Profits are distributed proportionally, offering microscopic but measurable returns.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <h3 class="section-title">Our Products</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>Tech Asset Pool</h4>
+          <p>Crypto holdings, tokenized data, and rare digital collectibles. Extremely volatile.</p>
+        </div>
+        <div class="card">
+          <h4>Server Jits Fund</h4>
+          <p>Innovative server and infrastructure projects driven by experimental tech trends.</p>
+        </div>
+        <div class="card">
+          <h4>Luck Pool</h4>
+          <p>Strategic engagement in high-odds digital events. Risk meets entertainment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h3 class="section-title">FAQ</h3>
+      <details>
+        <summary>Is my money safe?</summary>
+        <p>No. Investments here are highly speculative and may result in total loss.</p>
+      </details>
+      <details>
+        <summary>How do I withdraw?</summary>
+        <p>Withdrawals depend on liquidity and timing of fund cycles.</p>
+      </details>
+      <details>
+        <summary>Are you a regulated bank?</summary>
+        <p>This site is a fictional demonstration of a modern fintech concept.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Lucky Prosper Tech Bank — Prototype concept for demonstration purposes.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('signup-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Demo only — account creation disabled.');
+    });
+  </script>
+</body>
+</html>
