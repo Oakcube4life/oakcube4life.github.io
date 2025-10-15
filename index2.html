@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PharmaAI Care — Smarter Pharmacare with AI</title>
+  <meta name="description" content="PharmaAI Care: AI-powered medication management, coverage optimization and dispensing intelligence for pharmacies, clinics, and patients." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a; --card:#0b1220; --muted:#9aa7bf; --accent1:#6ee7b7; --accent2:#818cf8;
+      --glass: rgba(255,255,255,0.04);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071020 0%, #071326 60%);color:#e6eef8;line-height:1.45}
+    header{padding:28px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#04263a}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{max-width:1100px;margin:28px auto;padding:36px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:grid;grid-template-columns:1fr 420px;gap:28px}
+    .eyebrow{color:var(--accent1);font-weight:700;font-size:13px}
+    h1{font-size:34px;margin:8px 0 12px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#052231}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.4)}
+
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px auto;max-width:1100px;padding:0 24px}
+    .feature{padding:18px;border-radius:12px;background:var(--glass);min-height:120px}
+    .feature h3{margin:6px 0 8px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+    /* pricing */
+    .pricing{max-width:1100px;margin:34px auto;padding:0 24px;display:flex;gap:16px;flex-wrap:wrap}
+    .price-card{flex:1;min-width:240px;padding:20px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));}
+
+    /* demo panel */
+    .demo{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01)); padding:18px;border-radius:12px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input, select, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .result{margin-top:12px;padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);font-size:14px;color:var(--muted)}
+
+    footer{max-width:1100px;margin:40px auto;padding:24px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:1fr 1fr}.pricing{flex-direction:column}}
+    @media (max-width:600px){.features{grid-template-columns:1fr}.brand .text{display:none}.logo{width:40px;height:40px}}
+
+    /* small animated ornament */
+    .ai-blob{position:relative;width:100%;height:160px;border-radius:12px;padding:12px;display:flex;align-items:center;justify-content:center}
+    .blob{width:110px;height:110px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(129,140,248,0.95), rgba(110,231,183,0.85));filter:blur(18px);opacity:0.9;animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+    /* accessible focus */
+    a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(129,140,248,0.25);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">PA</div>
+      <div class="text">
+        <div style="font-weight:800">PharmaAI Care</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">AI for smarter medication & coverage</div>
+      </div>
+    </div>
+    <nav aria-label="Main Navigation">
+      <a href="#why">Why</a>
+      <a href="#features">Features</a>
+      <a href="#demo">Demo</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" role="region" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow">Launch Offer • HIPAA-ready prototype</div>
+        <h1 id="hero-title">AI that reduces medication waste, optimizes coverage, and empowers pharmacists</h1>
+        <p class="lead">PharmaAI Care combines insurance-aware recommendation engines, medication-interaction detection, and dispensing automation to improve outcomes and lower costs across clinics, pharmacies, and payers.</p>
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a demo</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('demo-input').focus()">Try demo</button>
+        </div>
+
+        <div style="margin-top:18px;" aria-hidden>
+          <div style="display:flex;gap:10px;align-items:center">
+            <div class="card" style="display:flex;gap:12px;align-items:center;flex:1">
+              <div style="width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;font-weight:700">95%</div>
+              <div>
+                <div style="font-weight:700">Coverage matches improved</div>
+                <div style="font-size:13px;color:var(--muted)">AI-assisted prior authorization routing</div>
+              </div>
+            </div>
+            <div class="card" style="display:flex;gap:12px;align-items:center;flex:1">
+              <div style="width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;font-weight:700">-18%</div>
+              <div>
+                <div style="font-weight:700">Medication waste</div>
+                <div style="font-size:13px;color:var(--muted)">Predictive refill & inventory insights</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside aria-label="Interactive demo and AI illustration">
+        <div class="card demo" role="region" aria-labelledby="demo-title">
+          <h3 id="demo-title">Try a quick medication assistant</h3>
+          <p style="margin:6px 0 12px;color:var(--muted);font-size:13px">Enter a medication and patient age to see AI-suggested checks (mock demo — not medical advice).</p>
+          <label for="demo-input">Medication</label>
+          <input id="demo-input" placeholder="e.g., Metformin" aria-describedby="demo-desc">
+          <label for="age" style="margin-top:8px">Patient age</label>
+          <input id="age" type="number" min="0" max="130" placeholder="45">
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <button class="btn btn-primary" onclick="runDemo()">Analyze</button>
+            <button class="btn btn-ghost" onclick="clearDemo()">Clear</button>
+          </div>
+          <div id="demo-result" class="result" role="status" aria-live="polite">Awaiting input…</div>
+        </div>
+
+        <div style="height:12px"></div>
+        <div class="card ai-blob" aria-hidden>
+          <div class="blob"></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features" class="features" aria-label="Key features">
+      <div class="feature card">
+        <h3>Insurance-aware recommendations</h3>
+        <p class="muted" style="color:var(--muted)">Automatically map each prescription to the patient's coverage rules, suggest lower-cost therapeutic equivalents, and prepare prior-authorizations (PA) with templated justification text.</p>
+      </div>
+      <div class="feature card">
+        <h3>Drug interaction & safety checks</h3>
+        <p class="muted" style="color:var(--muted)">Layered models check interactions, age-specific risks, kidney/liver function flags, and adherence barriers — surfaced to pharmacists with confidence scores.</p>
+      </div>
+      <div class="feature card">
+        <h3>Inventory & waste reduction</h3>
+        <p class="muted" style="color:var(--muted)">Forecast demand, optimize reorder points, and reduce expiries by reallocating stock across store networks.</p>
+      </div>
+    </section>
+
+    <section style="max-width:1100px;margin:24px auto;padding:0 24px;" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <div class="grid-2" style="margin-top:12px">
+        <div class="card">
+          <h3>AI + rules hybrid</h3>
+          <p style="color:var(--muted)">We combine deterministic clinical rules and coverage logic with ML ranking models so decisions are transparent and auditable — nurses and pharmacists remain in control.</p>
+
+          <ol style="color:var(--muted);margin-left:18px">
+            <li>Ingest prescription + patient context (age, comorbidities, insurance)</li>
+            <li>Run safety & interaction checks</li>
+            <li>Score coverage fit and alternative options</li>
+            <li>Output: suggested action + documentation bundle for dispensing or PA</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h3>Integrations</h3>
+          <p style="color:var(--muted)">FHIR / HL7, pharmacy POS, insurance APIs, and label printers. We also offer a secure dashboard for clinicians and an SDK for partners.</p>
+          <p style="margin-top:8px;color:var(--muted)"><strong>Security:</strong> role-based access, audit logs, and optional on-prem or VPC deployment for PHI-sensitive customers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" aria-labelledby="pricing-title">
+      <h2 style="max-width:1100px;margin:28px auto;padding:0 24px" id="pricing-title">Pricing</h2>
+      <div class="pricing">
+        <div class="price-card card" aria-hidden>
+          <h3>Starter</h3>
+          <p class="muted">For independent pharmacies & small clinics</p>
+          <div style="font-weight:800;font-size:22px;margin-top:8px">$199 / month</div>
+          <ul style="color:var(--muted);margin-top:8px">
+            <li>Core AI checks</li>
+            <li>Monthly usage quota</li>
+            <li>Email support</li>
+          </ul>
+          <div style="margin-top:12px"><button class="btn btn-primary">Get started</button></div>
+        </div>
+        <div class="price-card card">
+          <h3>Professional</h3>
+          <p class="muted">Mid-size pharmacies & clinics</p>
+          <div style="font-weight:800;font-size:22px;margin-top:8px">$799 / month</div>
+          <ul style="color:var(--muted);margin-top:8px">
+            <li>Everything in Starter</li>
+            <li>Higher quotas & priority support</li>
+            <li>Integration assistance</li>
+          </ul>
+          <div style="margin-top:12px"><button class="btn btn-primary">Contact sales</button></div>
+        </div>
+        <div class="price-card card">
+          <h3>Enterprise</h3>
+          <p class="muted">Large networks & payers</p>
+          <div style="font-weight:800;font-size:22px;margin-top:8px">Custom pricing</div>
+          <ul style="color:var(--muted);margin-top:8px">
+            <li>On-prem / VPC</li>
+            <li>Custom models & SLAs</li>
+            <li>Dedicated onboarding</li>
+          </ul>
+          <div style="margin-top:12px"><button class="btn btn-primary">Request demo</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="max-width:1100px;margin:24px auto;padding:0 24px;" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact & Next steps</h2>
+      <div class="grid-2" style="margin-top:12px">
+        <div class="card">
+          <h3>Request a pilot</h3>
+          <p style="color:var(--muted)">We run 6–12 week pilots to prove ROI. Everything is PHI-aware and we provide anonymized sample data reports.</p>
+          <form onsubmit="return submitContact(event)" aria-label="Contact form">
+            <label for="name">Your name</label>
+            <input id="name" required>
+            <label for="org" style="margin-top:8px">Organization</label>
+            <input id="org" required>
+            <label for="email" style="margin-top:8px">Email</label>
+            <input id="email" type="email" required>
+            <label for="msg" style="margin-top:8px">Message</label>
+            <textarea id="msg" rows="4" placeholder="Tell us what you'd like to achieve"></textarea>
+            <div style="margin-top:10px"><button class="btn btn-primary" type="submit">Send request</button></div>
+          </form>
+          <div id="contact-status" class="result" style="display:none;margin-top:10px"></div>
+        </div>
+
+        <div class="card">
+          <h3>FAQ</h3>
+          <details>
+            <summary style="cursor:pointer">Is this medical advice?</summary>
+            <div style="color:var(--muted)">No. Our system provides decision-support. Final clinical decisions must be made by licensed clinicians. Always validate with local guidelines.</div>
+          </details>
+          <details style="margin-top:8px">
+            <summary style="cursor:pointer">How is patient privacy handled?</summary>
+            <div style="color:var(--muted)">We support encrypted data at rest/in transit, role-based access and audit logs. On-prem and VPC deployments available for PHI-sensitive customers.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      © <span id="year"></span> PharmaAI Care — Built with ❤️ for better outcomes
+    </div>
+    <div style="font-size:13px;color:var(--muted)">Follow: <a href="#" style="color:var(--muted)">LinkedIn</a> · <a href="#" style="color:var(--muted)">Twitter</a></div>
+  </footer>
+
+  <script>
+    // small demo logic (mock — not a real medical AI)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function clearDemo(){document.getElementById('demo-input').value='';document.getElementById('age').value='';document.getElementById('demo-result').textContent='Awaiting input…'}
+    function runDemo(){
+      const med = (document.getElementById('demo-input').value||'').trim();
+      const age = parseInt(document.getElementById('age').value||'0',10);
+      const out = document.getElementById('demo-result');
+      if(!med){out.textContent='Please enter a medication name.';return}
+      out.textContent='Analyzing…';
+      // mock latency
+      setTimeout(()=>{
+        const lower = med.toLowerCase();
+        const checks = [];
+        if(lower.includes('metformin')){
+          checks.push('Check renal function — dosing guidance may be needed for reduced eGFR.');
+        }
+        if(lower.includes('warfarin') || lower.includes('warfarin-like')){
+          checks.push('High bleeding risk — check concurrent NSAIDs and recent INR.');
+        }
+        if(age && age>75) checks.push('Elderly: review fall risk and renal dosing.');
+        if(checks.length===0) checks.push('No high-risk signals detected in mock check. Review local guidelines.');
+        // coverage suggestion (mock)
+        const coverage = lower.includes('insulin') ? 'Verify specialty-tier coverage; consider biosimilar alternatives where appropriate.' : 'Generic alternatives may reduce cost; verify formulary.';
+        out.innerHTML = '<strong>Top flags:</strong><br>' + checks.map(x=>'<div style="margin-top:6px">• '+x+'</div>').join('') + '<div style="margin-top:10px"><strong>Coverage hint:</strong><br>'+coverage+'</div>';
+      },700);
+    }
+
+    function submitContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const org = document.getElementById('org').value.trim();
+      const msg = document.getElementById('msg').value.trim();
+      const status = document.getElementById('contact-status');
+      // front-end validation
+      if(!name||!email||!org){status.style.display='block';status.textContent='Please complete name, organization, and email.';return}
+      status.style.display='block';status.textContent='Sending request… (demo page — no backend configured)';
+      // NOTE: On a real site you'd POST to your backend here. We'll simulate success.
+      setTimeout(()=>{status.textContent='Request recorded. We will contact you within 2 business days (demo).';},800);
+      return false;
+    }
+  </script>
+</body>
+</html>
